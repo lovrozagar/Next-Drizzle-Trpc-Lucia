@@ -4,4 +4,3 @@
 /artifacts/
 /coverage/
 .git/
-/src/lib/db/migrations/

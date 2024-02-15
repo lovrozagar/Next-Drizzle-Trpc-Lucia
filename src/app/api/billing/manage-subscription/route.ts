@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { stripe } from '@/lib/stripe/index'
+import { stripe } from '@/lib/payment'
 import { absoluteUrl } from '@/lib/utils'
 
 type ManageStripeSubscriptionActionProps = {

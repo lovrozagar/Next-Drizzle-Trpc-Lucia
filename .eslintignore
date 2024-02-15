@@ -12,3 +12,4 @@ drizzle.config.ts
 postcss.config.js
 tailwind.config.ts
 tsconfig.json
+next.config.mjs

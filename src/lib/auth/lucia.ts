@@ -1,9 +1,8 @@
-/* eslint-disable camelcase */
 /* eslint-disable sonar/no-wildcard-import */
 /* eslint-disable import/no-namespace */
 import { pg } from '@lucia-auth/adapter-postgresql'
 import { lucia } from 'lucia'
-import { nextjs_future } from 'lucia/middleware'
+import { nextjs_future as nextjsFuture } from 'lucia/middleware'
 import * as context from 'next/headers'
 import { cache } from 'react'
 
@@ -16,7 +15,7 @@ const auth = lucia({
     session: 'user_session',
   }),
   env: 'DEV',
-  middleware: nextjs_future(),
+  middleware: nextjsFuture(),
   sessionCookie: { expires: false },
   getUserAttributes: (data) => ({
     username: data.username,

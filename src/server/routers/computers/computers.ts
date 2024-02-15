@@ -1,4 +1,4 @@
-import { publicProcedure, router } from '@/lib/server/trpc'
+import { publicProcedure, router } from '@/server/trpc'
 
 const computersRouter = router({
   getComputers: publicProcedure.query(() => [

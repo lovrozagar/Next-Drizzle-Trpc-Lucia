@@ -4,7 +4,7 @@ import { storeSubscriptionPlans } from '@/config/subscriptions'
 import { getUserAuth } from '@/lib/auth/utils'
 import { db } from '@/lib/db/index'
 import { subscriptions } from '@/lib/db/schema/subscriptions'
-import { stripe } from '@/lib/stripe/index'
+import { stripe } from '@/lib/payment'
 
 const MILISECONDS_IN_DAY = 86_400_000
 

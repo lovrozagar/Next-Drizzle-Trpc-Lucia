@@ -9,7 +9,7 @@ import type Stripe from 'stripe'
 
 import { db } from '@/lib/db/index'
 import { subscriptions } from '@/lib/db/schema/subscriptions'
-import { stripe } from '@/lib/stripe/index'
+import { stripe } from '@/lib/payment'
 
 const MILISECONDS_IN_SECOND = 1000
 

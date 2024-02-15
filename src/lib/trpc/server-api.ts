@@ -9,8 +9,8 @@ import { cache } from 'react'
 import SuperJSONTransformer from 'superjson'
 
 import { env } from '@/lib/env.mjs'
-import { appRouter } from '@/lib/server/routers/_app'
 import { createTRPCContext } from '@/lib/trpc/context'
+import { AppRouter, appRouter } from '@/server/routers/app-router'
 
 const createContext = cache(() =>
   createTRPCContext({
@@ -21,7 +21,7 @@ const createContext = cache(() =>
   }),
 )
 
-const api = createTRPCProxyClient<typeof appRouter>({
+const serverApi = createTRPCProxyClient<AppRouter>({
   transformer: SuperJSONTransformer,
   links: [
     loggerLink({
@@ -58,4 +58,4 @@ const api = createTRPCProxyClient<typeof appRouter>({
   ],
 })
 
-export { api }
+export { serverApi }

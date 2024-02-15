@@ -1,6 +1,6 @@
 import { getUserAuth } from '@/lib/auth/utils'
-import { publicProcedure, router } from '@/lib/server/trpc'
-import { getUserSubscriptionPlan } from '@/lib/stripe/subscription'
+import { getUserSubscriptionPlan } from '@/lib/payment/subscription'
+import { publicProcedure, router } from '@/server/trpc'
 
 const accountRouter = router({
   getUser: publicProcedure.query(async () => {

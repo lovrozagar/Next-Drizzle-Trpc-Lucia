@@ -7,7 +7,7 @@ import { loggerLink, unstable_httpBatchStreamLink } from '@trpc/client'
 import React from 'react'
 import SuperJSONTransformer from 'superjson'
 
-import { trpc } from '@/lib/trpc/client'
+import { clientApi } from '@/lib/trpc/client-api'
 import { getUrl } from '@/lib/trpc/utils'
 
 function TrpcProvider({
@@ -19,7 +19,7 @@ function TrpcProvider({
 }>) {
   const [queryClient] = React.useState(() => new QueryClient({}))
   const [trpcClient] = React.useState(() =>
-    trpc.createClient({
+    clientApi.createClient({
       transformer: SuperJSONTransformer,
       links: [
         loggerLink({
@@ -41,9 +41,9 @@ function TrpcProvider({
   )
 
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
+    <clientApi.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </trpc.Provider>
+    </clientApi.Provider>
   )
 }
 

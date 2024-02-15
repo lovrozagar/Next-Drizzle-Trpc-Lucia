@@ -1,9 +1,18 @@
 /* eslint-disable max-lines */
+
 import Link from 'next/link'
 
-function LandingPage() {
+import { PageClient } from '@/app/page-client'
+import { serverApi } from '@/lib/trpc/server-api'
+
+async function LandingPage() {
+  const userData = await serverApi.account.getUser.query()
+
+  console.log(userData)
+
   return (
     <div className='flex min-h-screen flex-col'>
+      <PageClient />
       <header className='flex h-14 items-center px-4 lg:px-6'>
         <Link className='flex items-center justify-center' href='#'>
           <svg

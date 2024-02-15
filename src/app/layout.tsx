@@ -2,6 +2,9 @@ import '@/styles/globals.css'
 
 import { Metadata } from 'next'
 import { Inter as getInter } from 'next/font/google'
+import { cookies } from 'next/headers'
+
+import { TrpcProvider } from '@/lib/trpc/provider'
 
 const inter = getInter({ subsets: ['latin'] })
 
@@ -17,7 +20,9 @@ function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <TrpcProvider cookies={cookies().toString()}>{children}</TrpcProvider>
+      </body>
     </html>
   )
 }

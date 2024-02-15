@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 import { ManageUserSubscriptionButton } from '@/app/(app)/account/billing/manage-user-subscription-button'
 import { storeSubscriptionPlans } from '@/config/subscriptions'
 import { checkAuth, getUserAuth } from '@/lib/auth/utils'
-import { getUserSubscriptionPlan } from '@/lib/stripe/subscription'
+import { getUserSubscriptionPlan } from '@/lib/payment/subscription'
 
 const HUNDRED = 100
 

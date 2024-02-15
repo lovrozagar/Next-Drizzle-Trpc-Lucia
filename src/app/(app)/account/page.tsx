@@ -1,7 +1,7 @@
 import { PlanSettings } from '@/app/(app)/account/plan-settings'
 import { UserSettings } from '@/app/(app)/account/user-settings'
 import { checkAuth, getUserAuth } from '@/lib/auth/utils'
-import { getUserSubscriptionPlan } from '@/lib/stripe/subscription'
+import { getUserSubscriptionPlan } from '@/lib/payment/subscription'
 
 async function Account() {
   await checkAuth()
