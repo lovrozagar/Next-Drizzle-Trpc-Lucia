@@ -1,0 +1,34 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "strict",
+  "jsonRecursiveSort": true,
+  "jsxSingleQuote": true,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-packagejson",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-css-order",
+    "prettier-plugin-sort-json"
+  ],
+  "printWidth": 100,
+  "proseWrap": "always",
+  "quoteProps": "consistent",
+  "semi": false,
+  "singleAttributePerLine": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "tailwindConfig": "tailwind.config.ts",
+  "tailwindFunctions": ["cn", "clsx"],
+  "trailingComma": "all",
+  "useTabs": false
+}

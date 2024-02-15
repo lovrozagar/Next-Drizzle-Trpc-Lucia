@@ -1,0 +1,13 @@
+{
+  "alias": "@",
+  "auth": "lucia",
+  "componentLib": null,
+  "driver": "pg",
+  "hasSrc": true,
+  "orm": "drizzle",
+  "packages": ["drizzle", "lucia", "trpc", "resend", "stripe"],
+  "preferredPackageManager": "bun",
+  "provider": "neon",
+  "rootPath": "src/",
+  "t3": false
+}
